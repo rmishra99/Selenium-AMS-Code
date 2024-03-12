@@ -66,7 +66,7 @@ public class LoginTestCases extends BaseTest {
 		loginAms.loginScreen();
 	}
 	
-	@Test(priority =5)
+	@Test(priority = 5)
 	public void CheckEyeIcon() throws InterruptedException{
 		test =extent.createTest("Verify Eye Icon").assignCategory("Regression").assignCategory("Sanity");
 		loginAms.EnterLoginUsernameOnStagging();

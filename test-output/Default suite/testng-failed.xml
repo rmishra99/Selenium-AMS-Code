@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ams.testcases.LoginTestCases">
+      <class name="com.ams.testcases.SideBarTestCases">
         <methods>
+          <include name="CheckExpenditureHeadScreen"/>
           <include name="StartTest"/>
           <include name="launchBrowser"/>
-          <include name="CheckEyeIcon"/>
           <include name="endTest"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ams.testcases.LoginTestCases -->
+      </class> <!-- com.ams.testcases.SideBarTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
