@@ -10,6 +10,15 @@ import com.demo.base.BaseTest;
 
 public class Login extends BaseTest{
 	
+	//Direct Login
+	public void LoginDirect() throws InterruptedException {		
+		EnterLoginUsernameOnStagging();
+		EnterLoginPasswordOnStagging();
+		ClickSignInButtonOnStagging();
+		Thread.sleep(2000);
+		VerifyExpensePageOnStagging();
+	}
+	
 	
 	//Username Field
 	public void EnterLoginUsernameOnStagging() {
@@ -19,7 +28,7 @@ public class Login extends BaseTest{
 			Assert.assertEquals(config.getProperty("adminUsername"), username.getAttribute("value"));
 			test.pass("Entered Username: " + username.getAttribute("value"));
 		} catch (AssertionError e) {
-			test.fail("Unable to enter username | expected Username: "+username.getAttribute("value")+"- actual Username: "+config.getProperty("adminUsername"));
+			test.fail("Unable to enter username | Actual Username: "+username.getAttribute("value")+"- Expected Username: "+config.getProperty("adminUsername"));
 		}
 	}
 	
@@ -190,5 +199,7 @@ public class Login extends BaseTest{
 		}
 	}
 	
+
+
 
 }

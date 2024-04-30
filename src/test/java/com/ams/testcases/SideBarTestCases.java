@@ -16,11 +16,7 @@ public class SideBarTestCases extends BaseTest{
 	@Test(priority = 1)
 	public void CheckExpenditureHeadScreen() throws InterruptedException {
 		test = extent.createTest("Verify SideBar").assignCategory("Regression").assignCategory("Sanity");
-		loginAms.EnterLoginUsernameOnStagging();
-		loginAms.EnterLoginPasswordOnStagging();
-		loginAms.ClickSignInButtonOnStagging();
-		Thread.sleep(2000);
-		loginAms.VerifyExpensePageOnStagging();
+		loginAms.LoginDirect();
 		Thread.sleep(2000);
 		sidebar.ClickOnExpenditrureHead();
 		Thread.sleep(2000);
@@ -49,10 +45,9 @@ public class SideBarTestCases extends BaseTest{
 		sidebar.ClickOnResource();
 		Thread.sleep(2000);
 		sidebar.ValidateResourceScreen();
+		Thread.sleep(2000);
+
 	}
-	
-
-
-	
+		
 
 }

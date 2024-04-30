@@ -26,7 +26,7 @@ public class LoginTestCases extends BaseTest {
 		loginAms.clickOnLogoutYes(); 
 		Thread.sleep(2000);
 		loginAms.loginScreen();
-		
+				
 	}
 	
 	
